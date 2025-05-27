@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Graph Generator</title>
-  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    #network {
+      width: 80%;
+      height: 400px;
+      margin: 20px auto;
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 5px 10px;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    #binaryOutput {
+      margin-top: 20px;
+      font-size: 18px;
+      word-break: break-all;
+    }
+  </style>
 </head>
 <body>
-  <h1>Graph Generator</h1>
 
-  <label>Binärzahl eingeben:</label>
-  <input id="binaryInput" type="text">
-  <p>Deine Eingabe: <span id="binaryOutput"></span></p>
+  <h1>Graph Generator & Binärmatrix</h1>
 
-  <button onclick="addNode()">Knoten hinzufügen</button>
-  <button onclick="clearGraph()">Graph zurücksetzen</button>
+  <div id="network"></div>
 
-  <div id="graph"></div>
+  <button onclick="addNode()">Punkt hinzufügen</button>
+  <button onclick="clearGraph()">Graph leeren</button>
 
   <h2>Matrix</h2>
-  <div id="matrixContainer"></div>
+  <div id="matrix"></div>
+
+  <h2>Binärwort</h2>
+  <div id="binaryOutput"></div>
 
   <script src="script.js"></script>
 </body>
