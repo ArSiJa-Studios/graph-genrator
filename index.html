@@ -28,6 +28,7 @@
       border: 1px solid #666;
       padding: 5px 10px;
       text-align: center;
+      cursor: pointer;
     }
     button {
       margin: 10px;
@@ -37,7 +38,11 @@
     #binaryOutput {
       margin-top: 20px;
       font-size: 18px;
-      word-break: break-all;
+      word-break: break-word;
+      padding: 10px;
+      background: #fff;
+      display: inline-block;
+      border: 1px solid #ccc;
     }
   </style>
 </head>
@@ -50,7 +55,7 @@
   <button onclick="addNode()">Punkt hinzufügen</button>
   <button onclick="clearGraph()">Graph leeren</button>
 
-  <h2>Matrix</h2>
+  <h2>Adjazenzmatrix</h2>
   <div id="matrix"></div>
 
   <h2>Binärwort</h2>
