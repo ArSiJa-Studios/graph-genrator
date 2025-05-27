@@ -110,3 +110,34 @@ function updateBinaryWord() {
 
   document.getElementById("binaryOutput").innerText = word;
 }
+
+function loadFromBinary() {
+  var input = document.getElementById("binaryInput").value.trim();
+  if (!/^[01]+$/.test(input)) {
+    alert("Bitte nur 0 und 1 eingeben.");
+    return;
+  }
+
+  var length = input.length;
+  var size = Math.sqrt(length);
+  if (size !== Math.floor(size)) {
+    alert("Die Länge des Binärworts muss ein Quadrat sein (z.B. 4, 9, 16...)");
+    return;
+  }
+
+  clearGraph();
+
+  for (var i = 0; i < size; i++) {
+    addNode();
+  }
+
+  var index = 0;
+  for (var from = 0; from < size; from++) {
+    for (var to = 0; to < size; to++) {
+      if (input[index] === "1") {
+        addEdge(from, to);
+      }
+      index++;
+    }
+  }
+}
