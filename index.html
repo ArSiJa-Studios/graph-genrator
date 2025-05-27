@@ -9,14 +9,17 @@
 <body>
   <h1>Graph Generator</h1>
 
-  <label>Binärzahl:</label>
+  <label>Binärzahl eingeben:</label>
   <input id="binaryInput" type="text">
-  <p id="binaryOutput"></p>
+  <p>Deine Eingabe: <span id="binaryOutput"></span></p>
+
+  <button onclick="addNode()">Knoten hinzufügen</button>
+  <button onclick="clearGraph()">Graph zurücksetzen</button>
 
   <div id="graph"></div>
 
   <h2>Matrix</h2>
-  <table id="matrix"></table>
+  <div id="matrixContainer"></div>
 
   <script src="script.js"></script>
 </body>
