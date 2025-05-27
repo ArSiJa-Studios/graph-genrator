@@ -44,6 +44,12 @@
       display: inline-block;
       border: 1px solid #ccc;
     }
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      width: 300px;
+    }
   </style>
 </head>
 <body>
@@ -60,6 +66,10 @@
 
   <h2>Binärwort</h2>
   <div id="binaryOutput"></div>
+
+  <h2>Binärwort laden</h2>
+  <input type="text" id="binaryInput" placeholder="z.B. 010011..." />
+  <button onclick="loadFromBinary()">Graph laden</button>
 
   <script src="script.js"></script>
 </body>
