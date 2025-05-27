@@ -1,15 +1,32 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+
 #graph {
   width: 600px;
   height: 400px;
   border: 1px solid black;
   margin-bottom: 20px;
 }
+
 table, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+
 td {
   width: 30px;
   height: 30px;
   text-align: center;
+  cursor: pointer;
+}
+
+td:hover {
+  background-color: #e0e0e0;
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
